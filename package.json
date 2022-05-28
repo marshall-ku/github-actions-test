@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint src/**",
-        "lint-diff": "eslint $(git diff --name-only $BASE $HEAD | grep -E '\\.((j|t)sx?)$' | xargs)"
+        "lint-diff": "eslint $(git diff --name-only origin/$BASE origin/$HEAD | grep -E '\\.((j|t)sx?)$' | xargs)"
     },
     "repository": {
         "type": "git",
