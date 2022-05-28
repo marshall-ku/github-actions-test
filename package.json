@@ -1,0 +1,29 @@
+{
+    "name": "github-actions-test",
+    "version": "1.0.0",
+    "description": "test",
+    "main": "src/index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint src/**",
+        "lint-diff": "eslint $(git diff --name-only $BASE $HEAD | grep -E '\\.((j|t)sx?)$' | xargs)"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marshall-ku/github-actions-test.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/marshall-ku/github-actions-test/issues"
+    },
+    "homepage": "https://github.com/marshall-ku/github-actions-test#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.22.0",
+        "@typescript-eslint/parser": "^5.22.0",
+        "eslint": "^8.14.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.26.0"
+    }
+}
