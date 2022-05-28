@@ -1,0 +1,17 @@
+name: Commit on commit
+
+on:
+    workflow_dispatch:
+
+jobs:
+    commit:
+        name: Commit README.md
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - run: date +%s > tmp.md
+            - run: |
+                  chmod +x ./scripts/commit.sh
+                  ./scripts/commit.sh
+              env:
+                  MESSAGE: "Update"
