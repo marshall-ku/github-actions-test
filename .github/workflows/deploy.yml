@@ -3,7 +3,7 @@ name: Deploy on commit
 on:
     pull_request:
         branches:
-            - master
+            - develop
 
 jobs:
     deploy:
