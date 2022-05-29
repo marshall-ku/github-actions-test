@@ -1,0 +1,17 @@
+name: Deploy on commit
+
+on:
+    pull_request:
+        branches:
+            - master
+
+jobs:
+    deploy:
+        name: Deploy
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Deploy
+              run: |
+                  npm ci
+                  npm run deploy
